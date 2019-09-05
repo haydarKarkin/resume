@@ -1,6 +1,6 @@
 language: node_js
 git:
-  depth:       3
+  depth: 3
 node_js:
   - "node"
 install: npm install
@@ -11,10 +11,5 @@ cache:
     - node_modules
 notifications:
   email: false
-deploy:
- provider: pages
- skip_cleanup: true
- github_token: $GITHUB_TOKEN
- local_dir: docs
- on:
-   branch: master
+after_success:
+  - ./push.sh
