@@ -4,6 +4,9 @@ git:
 node_js:
 - node
 install: npm install
+before_script:
+- git config --global user.email "haydar.karkin@gmail.com"
+- git config --global user.name "Haydar Karkin"
 script:
 - npm run build
 cache:
