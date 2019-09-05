@@ -1,0 +1,20 @@
+language: node_js
+git:
+  depth:       3
+node_js:
+  - "node"
+install: npm install
+script:
+  - npm run build
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN
+ local_dir: docs
+ on:
+   branch: master
