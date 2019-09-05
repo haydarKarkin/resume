@@ -2,14 +2,17 @@ language: node_js
 git:
   depth: 3
 node_js:
-  - "node"
+- node
 install: npm install
 script:
-  - npm run build
+- npm run build
 cache:
   directories:
-    - node_modules
+  - node_modules
 notifications:
   email: false
 after_success:
-  - ./push.sh
+- "./push.sh"
+env:
+  global:
+    secure: OtyclwA/t/cZkRm9GbQuflNsn9kYz+9WBdrcnY12XaIYiwrhKUNM35JltTVHmmDUEWzGjw/1l+Yeg+iJCEpBuU4Gq3IRXAbP3cKZhfNnbbxEqifV/HD2c0O9Rsyg0Lg39dqYph5+G7SzESqCFqyKNCNL9zUEnCdI0OtAbTsW0svR1xjo4Bad54md3Bh0vQEIWLAdT9QWsr2SI1kiKrS0V6BNeCur9P9CqjNn3bV7NiB5jJaUZTdFu37ZU1++kGlJhJ3LwKiTPp9VEHHtkwVYGlqBrRQh/mUJMJ73cXmQ0tzWupeJSbLpNfKACkTPef2Ji8/rstW9cnsaa8AYjSmMVyH4aRSMi/LdMw6xRvsR9z/fF6fOdoPqFc6jfb/yX3ylcQbJVcq/1bbjclBzmO/3R6LSr0+9zwYd2V+t3bhmw3ZAeVvM30gw4uBoP9NLFr7CxPZWfsry0WFkgi8KSbz6w8vWdz4wIjbRSrIgUmGF2xG5Eyp8v0+vQA4YAPjAn2GVyxafbcdpNk284EwoXUpx/hAh5XohsIFgBxEJrtUvc7jMz35GghTf0ucvWHDJS26yUWu9GRe0ryvvJ3is2XDlOaZToZUerUDiLZkqEZ1yd52Bg0YIR+FUiVljbESilcS8k5wje0B8KowRUAWQOXBZJSh1rf4xi3sdlTZAt/7DbOE=
